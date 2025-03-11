@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Anda</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('img/bg.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #fff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .gift-container {
+            opacity: 0;
+            animation: fadeIn 0.4s ease-in-out forwards;
+            animation-delay: 0.4s;
+            margin-top: 10px;
+        }
+
+        .gift-image {
+            width: 75%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-container {
+            margin-top: 15px;
+        }
+
+        .claim-button,
+        .desc-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: #28a745;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 0.4s ease-in-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        .claim-button:hover,
+        .desc-button:hover {
+            background: #218838;
+        }
+
+        .description {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+                margin-bottom: 8px;
+            }
+
+            .gift-image {
+                width: 85%;
+            }
+
+            .claim-button,
+            .desc-button {
+                font-size: 16px;
+                padding: 10px 15px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <script>
+        function scrollToDescription() {
+            document.getElementById('description').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Selamat Anda Mendapatkan Hadiah Spesial Ramadhan</h1>
+    <div class="gift-container">
+        <img src="img/gift.png" alt="Hadiah" class="gift-image">
+    </div>
+    <div class="button-container">
+        <a href="https://wa.me/6285770654131?text=mass,%20Ade ambil%20Hadiahnya%20yaaa,%20Makasihh%20Mamass!"
+            class="claim-button">
+            Klaim Hadiah
+        </a>
+        <button class="desc-button" onclick="scrollToDescription()">Lihat Deskripsi</button>
+    </div>
+
+    <div id="description" class="description">
+        <h2>Untuk Yunda</h2>
+        <p>Mas tahu akhir-akhir ini Ade sibuk banget sama PKL dan pasti capek. Tapi di balik semua itu, Mas
+            selalu lihat Ade berusaha keras buat PKLnya. Mas bangga sama Ade! 🥰</p>
+        <p>Ini cuma hadiah kecil buat Ade, biar Ade tahu kalau Mas ada buat Ade. Terima kasih Ade.
+            Ade itu istimewa, jangan pernah ragu tentang itu! 💖</p>
+    </div>
+</body>
+
+</html>
